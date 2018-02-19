@@ -1,5 +1,9 @@
 class Ghost
-  def color
-    ["white", "yellow", "purple", "red"].sample
+  attr_reader :color
+
+  COLORS = %w(white yellow purple red)
+
+  def initialize
+    @color = COLORS.sample
   end
 end
