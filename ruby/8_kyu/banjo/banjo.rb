@@ -5,6 +5,6 @@
 
 class Banjo
   def self.are_you_playing_banjo(name)
-    name.chars[0]downcase == "r" ? "#{name} plays banjo" : "#{name} does not play banjo"
+    name.chars[0].downcase == "r" ? "#{name} plays banjo" : "#{name} does not play banjo"
   end
 end
