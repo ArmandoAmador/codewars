@@ -1,20 +1,11 @@
-function sortWord(word) {
+const sortWord = (word) => {
   return word.split('').sort('').join('');
 }
 
-function anagrams(word, words) {
-  let wordsArr = [];
-  let sortedWord = sortWord(word);
-
-  for (var i = 0; i < words.length; i++) {
-    const sortedCurrentWord = sortWord(words[i]);
-
-    if (sortedWord === sortedCurrentWord) {
-      wordsArr.push(words[i]);
-    }
-  }
-
-  return wordsArr
+const anagrams = (word, words) => {
+  return words.filter((item) => {
+    return sortWord(item) === sortWord(word);
+  });
 }
 
 anagrams('abba', ['aabb', 'abcd', 'bbaa', 'dada']) // ['aabb', 'bbaa']
